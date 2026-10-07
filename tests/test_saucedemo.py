@@ -29,4 +29,35 @@ def test_login_exitoso():
     assert titulo == "Products", f"Se esperaba 'Products', se obtuvo '{titulo}'"
 
     driver.quit()
-    
+
+
+def test_catalogo_productos_visibles():
+    driver = webdriver.Chrome()
+    driver.get("https://www.saucedemo.com/")
+
+    # Login (el mismo de antes: cada test es independiente)
+    driver.find_element(By.ID, "user-name").send_keys("standard_user")
+    driver.find_element(By.ID, "password").send_keys("secret_sauce")
+    driver.find_element(By.ID, "login-button").click()
+
+    # Esperamos a que aparezcan TODOS los productos
+    productos = WebDriverWait(driver, 10).until(
+        EC.visibility_of_all_elements_located((By.CLASS_NAME, "inventory_item"))
+    )
+
+    # Verificamos que haya al menos uno
+    assert len(productos) > 0, "No se encontraron productos en el inventario"
+
+    # Tomamos el primer producto de la lista
+    primer_producto = productos[0]
+
+    # Dentro de ese producto, buscamos su nombre y su precio
+    nombre = primer_producto.find_element(By.CLASS_NAME, "inventory_item_name").text
+    precio = primer_producto.find_element(By.CLASS_NAME, "inventory_item_price").text
+
+    # Validamos que no estén vacíos y mostramos los datos
+    assert nombre != "", "El primer producto no tiene nombre"
+    assert precio.startswith("$"), f"El precio debería empezar con '$', se obtuvo '{precio}'"
+    print(f"Primer producto: {nombre} - {precio}")
+
+    driver.quit()
