@@ -60,4 +60,50 @@ def test_catalogo_productos_visibles():
     assert precio.startswith("$"), f"El precio debería empezar con '$', se obtuvo '{precio}'"
     print(f"Primer producto: {nombre} - {precio}")
 
+    assert driver.title == "Swag Labs", f"Título esperado 'Swag Labs', obtenido '{driver.title}'"
+
+    driver.quit()
+
+
+def test_elementos_interfaz_presentes():
+    driver = webdriver.Chrome()
+    driver.get("https://www.saucedemo.com/")
+
+    
+# Login (el mismo de antes: cada test es independiente)
+    driver.find_element(By.ID, "user-name").send_keys("standard_user")
+    driver.find_element(By.ID, "password").send_keys("secret_sauce")
+    driver.find_element(By.ID, "login-button").click()
+
+    # TODO 1: esperar a que el botón de menú sea visible
+    # TODO 2: esperar a que el filtro de orden sea visible
+
+    # TODO 3: verificar con assert que ambos se muestran
+
+    driver.quit()
+
+def test_elementos_interfaz_presentes():
+    driver = webdriver.Chrome()
+    driver.get("https://www.saucedemo.com/")
+
+    # Login (cada test es independiente)
+    driver.find_element(By.ID, "user-name").send_keys("standard_user")
+    driver.find_element(By.ID, "password").send_keys("secret_sauce")
+    driver.find_element(By.ID, "login-button").click()
+
+    # Esperamos a que el botón de menú (las 3 rayitas) sea visible
+    menu = WebDriverWait(driver, 10).until(
+        EC.visibility_of_element_located((By.ID, "react-burger-menu-btn"))
+    )
+
+    # Esperamos a que el filtro de orden (desplegable) sea visible
+    filtro = WebDriverWait(driver, 10).until(
+        EC.visibility_of_element_located((By.CLASS_NAME, "product_sort_container"))
+    )
+
+    # Verificamos que ambos se estén mostrando
+    assert menu.is_displayed(), "El botón de menú no está visible"
+    assert filtro.is_displayed(), "El filtro de orden no está visible"
+    assert driver.title == "Swag Labs", f"Título esperado 'Swag Labs', obtenido '{driver.title}'"
+
     driver.quit()
