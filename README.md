@@ -42,6 +42,13 @@ source venv/bin/activate        # En Windows: venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
+Opcionalmente, se puede usar un entorno virtual para aislar las dependencias del proyecto:
+
+```bash
+python3 -m venv venv
+source venv/bin/activate        # En Windows: venv\Scripts\activate
+```
+
 ## Cómo ejecutar las pruebas
 
 ```bash
