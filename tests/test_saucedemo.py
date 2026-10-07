@@ -2,6 +2,7 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+from utils.helpers import hacer_login
 
 
 def test_login_exitoso():
@@ -33,12 +34,7 @@ def test_login_exitoso():
 
 def test_catalogo_productos_visibles():
     driver = webdriver.Chrome()
-    driver.get("https://www.saucedemo.com/")
-
-    # Login (cada test es independiente)
-    driver.find_element(By.ID, "user-name").send_keys("standard_user")
-    driver.find_element(By.ID, "password").send_keys("secret_sauce")
-    driver.find_element(By.ID, "login-button").click()
+    hacer_login(driver)
 
     # Esperamos a que aparezcan TODOS los productos
     productos = WebDriverWait(driver, 10).until(
@@ -64,12 +60,7 @@ def test_catalogo_productos_visibles():
 
 def test_elementos_interfaz_presentes():
     driver = webdriver.Chrome()
-    driver.get("https://www.saucedemo.com/")
-
-    # Login (cada test es independiente)
-    driver.find_element(By.ID, "user-name").send_keys("standard_user")
-    driver.find_element(By.ID, "password").send_keys("secret_sauce")
-    driver.find_element(By.ID, "login-button").click()
+    hacer_login(driver)
 
     # Esperamos a que el botón de menú (las 3 rayitas) sea visible
     menu = WebDriverWait(driver, 10).until(
@@ -90,12 +81,7 @@ def test_elementos_interfaz_presentes():
 
 def test_agregar_producto_al_carrito():
     driver = webdriver.Chrome()
-    driver.get("https://www.saucedemo.com/")
-
-    # Login (cada test es independiente)
-    driver.find_element(By.ID, "user-name").send_keys("standard_user")
-    driver.find_element(By.ID, "password").send_keys("secret_sauce")
-    driver.find_element(By.ID, "login-button").click()
+    hacer_login(driver)
 
     # Paso 1: esperamos los productos y guardamos el nombre del primero
     productos = WebDriverWait(driver, 10).until(
@@ -126,3 +112,4 @@ def test_agregar_producto_al_carrito():
     )
 
     driver.quit()
+    
