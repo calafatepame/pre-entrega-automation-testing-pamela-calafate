@@ -1,0 +1,24 @@
+WARNING  selenium.webdriver.common.selenium_manager:selenium_manager.py:168 Cache folder (/Users/calafatepame/.cache/selenium) cannot be created: Permission denied (os error 13)
+WARNING  selenium.webdriver.common.selenium_manager:selenium_manager.py:168 Cache folder (/Users/calafatepame/.cache/selenium) cannot be created: Permission denied (os error 13)
+WARNING  selenium.webdriver.common.selenium_manager:selenium_manager.py:168 Cache folder (/Users/calafatepame/.cache/selenium) cannot be created: Permission denied (os error 13)
+WARNING  selenium.webdriver.common.selenium_manager:selenium_manager.py:168 Cache folder (/Users/calafatepame/.cache/selenium) cannot be created: Permission denied (os error 13)
+INFO     root:conftest.py:38 Test test_login_exitoso -> PASSED
+WARNING  selenium.webdriver.common.selenium_manager:selenium_manager.py:168 Cache folder (/Users/calafatepame/.cache/selenium) cannot be created: Permission denied (os error 13)
+WARNING  selenium.webdriver.common.selenium_manager:selenium_manager.py:168 Cache folder (/Users/calafatepame/.cache/selenium) cannot be created: Permission denied (os error 13)
+WARNING  selenium.webdriver.common.selenium_manager:selenium_manager.py:168 Cache folder (/Users/calafatepame/.cache/selenium) cannot be created: Permission denied (os error 13)
+WARNING  selenium.webdriver.common.selenium_manager:selenium_manager.py:168 Cache folder (/Users/calafatepame/.cache/selenium) cannot be created: Permission denied (os error 13)
+INFO     root:helpers.py:10 Iniciando login con el usuario standard_user
+INFO     root:conftest.py:38 Test test_catalogo_productos_visibles -> PASSED
+WARNING  selenium.webdriver.common.selenium_manager:selenium_manager.py:168 Cache folder (/Users/calafatepame/.cache/selenium) cannot be created: Permission denied (os error 13)
+WARNING  selenium.webdriver.common.selenium_manager:selenium_manager.py:168 Cache folder (/Users/calafatepame/.cache/selenium) cannot be created: Permission denied (os error 13)
+WARNING  selenium.webdriver.common.selenium_manager:selenium_manager.py:168 Cache folder (/Users/calafatepame/.cache/selenium) cannot be created: Permission denied (os error 13)
+WARNING  selenium.webdriver.common.selenium_manager:selenium_manager.py:168 Cache folder (/Users/calafatepame/.cache/selenium) cannot be created: Permission denied (os error 13)
+INFO     root:helpers.py:10 Iniciando login con el usuario standard_user
+INFO     root:conftest.py:38 Test test_elementos_interfaz_presentes -> PASSED
+WARNING  selenium.webdriver.common.selenium_manager:selenium_manager.py:168 Cache folder (/Users/calafatepame/.cache/selenium) cannot be created: Permission denied (os error 13)
+WARNING  selenium.webdriver.common.selenium_manager:selenium_manager.py:168 Cache folder (/Users/calafatepame/.cache/selenium) cannot be created: Permission denied (os error 13)
+WARNING  selenium.webdriver.common.selenium_manager:selenium_manager.py:168 Cache folder (/Users/calafatepame/.cache/selenium) cannot be created: Permission denied (os error 13)
+WARNING  selenium.webdriver.common.selenium_manager:selenium_manager.py:168 Cache folder (/Users/calafatepame/.cache/selenium) cannot be created: Permission denied (os error 13)
+INFO     root:helpers.py:10 Iniciando login con el usuario standard_user
+INFO     root:conftest.py:38 Test test_agregar_producto_al_carrito -> PASSED
+SSED
