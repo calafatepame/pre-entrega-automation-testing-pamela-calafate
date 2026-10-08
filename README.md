@@ -70,4 +70,4 @@ Para ver también los `print()` en la consola, agregá `-s`.
 - **Esperas explícitas** (`WebDriverWait`) en lugar de pausas fijas.
 - **Capturas automáticas:** cada test captura la excepción, saca una captura de pantalla con
   `tomar_captura` y vuelve a lanzar el error; el navegador siempre se cierra en el `finally`.
-- **Funciones auxiliares** en `utils/helpers.py` para no repetir código.pip freeze > requirements.txt
+- **Funciones auxiliares** en `utils/helpers.py` para no repetir código.
